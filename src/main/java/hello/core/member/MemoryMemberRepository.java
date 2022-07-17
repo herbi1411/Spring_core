@@ -5,9 +5,6 @@ import java.util.Map;
 
 public class MemoryMemberRepository implements MemberRepository{
 
-    public MemoryMemberRepository() {
-
-    }
     private static Map<Long, Member> store = new HashMap<>();
 
     @Override
