@@ -8,10 +8,12 @@ import hello.core.member.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("service")
+@Component
 public class OrderServiceImpl implements OrderService{
-    private MemberRepository memberRepository;
-    private  DiscountPolicy discountPolicy;
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+//    @Autowired private final MemberRepository memberRepository;
+//    @Autowired private final DiscountPolicy discountPolicy;
 
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
